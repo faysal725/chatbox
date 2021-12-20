@@ -1,0 +1,112 @@
+
+/* popup style  */
+.popup-content {
+    /* position: relative; */
+    /* background-image: url("../Image/backgroundImg2.png"); */
+    margin: auto;
+    background: white;
+    width: 100%;
+    border: none;
+    z-index: -2;
+  } 
+  .popup-arrow {
+    color: rgb(255, 255, 255);
+  }
+  [role='tooltip'].popup-content {
+    height: 700px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
+  
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  [data-popup='tooltip'].popup-overlay {
+    background: transparent;
+  }
+
+
+ /* .decoration{
+ position: absolute;
+      background-image: linear-gradient(50deg, rgb(74, 83, 204), rgb(37, 68, 241));
+      height: 12%;
+      width: 100%;
+      z-index: -2;
+  }  */
+
+/* .headline{
+  margin-top: -120px; 
+  position: relative
+}
+
+
+.message-part{
+  
+  margin-top: -120px; 
+  position: relative
+}
+
+
+.search-part{
+  margin-top: -120px; 
+  position: relative
+}
+
+.status-part{
+  margin-top: -120px; 
+  position: relative
+} 
+
+.support-part{
+  margin-top: -120px; 
+  position: relative
+} 
+.new-intercom{
+  margin-top: -120px; 
+  position: relative
+} */
+
+
+.msdDetailImg{
+    background-image: url("../Image/backgroundImg2.png");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+
+
+.msdDetailImg p{
+    color:rgb(214, 212, 212);
+    font-size:14px;
+    font-weight:400;
+}
+
+.backBtn:hover{
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+
+.messegin-input{
+    border:none;
+    height:50px ;
+    color: rgb(70, 70, 70);
+}
+
+
+.gifIcon{
+  height: 50px;
+}
+
+
+.inputIcon{
+  
+}
+
+.messegin-input:focus{
+  outline: none;
+}
+
