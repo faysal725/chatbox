@@ -1,9 +1,9 @@
 
 /* popup style  */
-.popup-content {
+/* .popup-content { */
     /* position: relative; */
     /* background-image: url("../Image/backgroundImg2.png"); */
-    margin: auto;
+    /* margin: auto;
     background: white;
     width: 100%;
     border: none;
@@ -23,7 +23,7 @@
   }
   [data-popup='tooltip'].popup-overlay {
     background: transparent;
-  }
+  } */
 
 
  /* .decoration{

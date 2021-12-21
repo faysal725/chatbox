@@ -23,8 +23,11 @@ const ChatModal = () => {
             <Popup 
             trigger={open => (<button onClick={setWindow(true)} className="btn btn-primary button chat-icon">{msgIcon}</button>)}
             position="top center"
+            contentStyle={{ padding: '0px'}}
+            arrow={false}
             nested    
-            closeOnDocumentClick  
+            closeOnDocumentClick
+            mouseEnterDelay={0}
             >     
                 
                 <Modal></Modal>

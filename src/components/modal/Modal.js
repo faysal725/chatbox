@@ -12,6 +12,11 @@ import backImage from '../Image/backgroundImg2.png'
 import './Modal.css'
 
 const Modal = () => {
+    
+    
+
+
+
     return (
 
         <PerfectScrollbar>

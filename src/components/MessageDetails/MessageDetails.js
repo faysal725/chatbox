@@ -18,7 +18,6 @@ const MessageDetails = () => {
     const paperClip = <FontAwesomeIcon icon={faPaperclip} style={{color:"#d0d0d0"}} className="fas fa-camera fa-lg"/>
 
     return (
-        <PerfectScrollbar>
 
         <div className='justify-content-center popup-content'>
             
@@ -26,10 +25,10 @@ const MessageDetails = () => {
                 
                 <div className="p-2 flex-shrink-1 bd-highlight pe-3">
                     
-                <button type="button" class="btn backBtn">{msgDetailIcon}</button>
+                <button type="button" class="btn backBtn animate__animated animate__slideInUp animate__delay-1s">{msgDetailIcon}</button>
                 
                 </div>
-                <div className="p-2 w-100 bd-highlight ps-3">
+                <div className="p-2 w-100 bd-highlight ps-3 animate__animated animate__slideInUp animate__delay-0.5s">
                     <h4>Intercom</h4>
                     <p>We help your business grow by connecting <br/> you to your customers.</p>
 
@@ -54,34 +53,29 @@ const MessageDetails = () => {
             {/* messege history part      */}
 
             
-            <div className="d-flex align-items-start flex-column bd-highlight mb-3" style={{height:" 460px"}}>
+            <div className="d-flex align-items-start flex-column bd-highlight mb-3" style={{height:" 490px"}}>
+            <PerfectScrollbar>
             <div className="mb-auto p-2 bd-highlight">
                 <p></p>
             </div>
-
+            </PerfectScrollbar>
 
 
              {/* messege sending part  */}
-            <div className=" bd-highlight input-group border-top container d-flex row" style={{width:"100%"}}>
-            {/* <span class="input-group-text" id="inputGroup-sizing-default">Default</span> */}
-            <input type="text" className=' messegin-input col-9' placeholder='Write your message....'/>
-            
-            
-            <div className="d-flex justify-content-end col-3 inputIcon">
-                {/* <button type="button" class="btn btn-light">
-                <img className='gifIcon' src={gifIcon} alt="..."/>
-                </button>
-                <button type="button" class="btn btn-light">{smile}</button>
-                <button type="button" class="btn btn-light">{paperClip}</button> */}
-                <span className='pt-3 px-2'>{smile}</span>
-                <span className='pt-3 px-2 '>{paperClip}</span>
-                <span className='pt-3 px-2'>{paperClip}</span>
-            </div>
+            <div className=" bd-highlight input-group border-top container d-flex" style={{width:"100%"}}>
+
+                <input type="text" className=' messegin-input col-8 ' placeholder='Write your message....'/>
+                
+                
+                <div className="d-flex justify-content-end col-4 inputIcon">
+                    <span className='pt-3 px-2'>{smile}</span>
+                    <span className='pt-3 px-2 '>{paperClip}</span>
+                    <span className='pt-3 px-2'>{paperClip}</span>
+                </div>
 
             </div>
             </div>
             </div>
-          </PerfectScrollbar>
     );
 };
 
