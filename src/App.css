@@ -1,8 +1,23 @@
 .App {
   text-align: center;
-  height: 900px;
+  height: 807px;
   background-color: antiquewhite;
+         /* margin-left: -40px;   this should be change for viewport  */
 }
+
+
+@media only screen and (max-device-width: 375px) {
+  .App {
+    text-align: center;
+    height: 810px;
+    background-color: antiquewhite;
+    margin-left: -60px;
+  }
+}
+
+
+
+
 
 .App-logo {
   height: 40vmin;

@@ -14,14 +14,22 @@ const ChatModal = () => {
 
     const msgIcon = <FontAwesomeIcon icon={faCommentAlt} className="fas fa-camera fa-2x"/>
 
-    const [window, setWindow] = useState(false)
+    const [window, setWindow] = useState("modal")
+    // let modalComp = <Modal></Modal>
+    // let msgComp =<MessageDetails></MessageDetails>
+    let Comp 
+    if (window === "modal") {
+        Comp = <Modal pageChange={setWindow} presentPage={window}></Modal>
+    }else if(window === "messageDetails"){
+        Comp = <MessageDetails pageChange={setWindow} presentPage={window}></MessageDetails>
+    }
 
     console.log(window)
     return (
         <div className="d-flex align-items-end">
             <div class="animate__animated  animate__delay-2s animate__rotateIn">Example</div>
             <Popup 
-            trigger={open => (<button onClick={setWindow(true)} className="btn btn-primary button chat-icon">{msgIcon}</button>)}
+            trigger={open => (<button onClick={()=>setWindow("modal")} className="btn btn-primary button chat-icon">{msgIcon}</button>)}
             position="top center"
             contentStyle={{ padding: '0px'}}
             arrow={false}
@@ -29,10 +37,8 @@ const ChatModal = () => {
             closeOnDocumentClick
             mouseEnterDelay={0}
             >     
-                
-                <Modal></Modal>
-                
-
+                {Comp}
+                {/* <Modal></Modal> */}
                 {/* <MessageDetails></MessageDetails> */}
             </Popup>
         </div>

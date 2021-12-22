@@ -20,18 +20,43 @@
   }
   [role='tooltip'].popup-content {
     padding: 0;
-    height: 700px;
+    height: 700px;        /* height: 850px;it need to change for viewport  */
     width: 400px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
   }
   
   .popup-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(146, 6, 6, 0.5);
   }
   [data-popup='tooltip'].popup-overlay {
     background: transparent;
     
     border-radius: 0px;
+  }
+
+
+
+
+
+
+  @media only screen and (max-device-width: 375px) {
+    #simple-bar{
+      max-height: 800px !important;
+    }
+    .popup-content {
+      background: white;
+      height: 800px;
+      width: 100%;
+      border: none;
+      z-index: -2;
+    } 
+    [role='tooltip'].popup-content {
+    padding: 0;
+    height: 810px;        
+    /* height: 850px;it need to change for viewport  */
+    width: 367px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
   }
 
 

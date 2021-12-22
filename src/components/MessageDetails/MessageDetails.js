@@ -10,7 +10,14 @@ import prof3 from '../Image/messageImg3.jpg';
 import gifIcon from '../Image/icon/smile-regular.svg'
 
 
-const MessageDetails = () => {
+
+
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
+
+const MessageDetails = ({pageChange, presentPage}) =>{
+    console.log( presentPage)
+
     const clockIcon = <FontAwesomeIcon icon={faClock} style={{color:"white"}} className="fas fa-camera clock-Icon"/>
 
     const msgDetailIcon = <FontAwesomeIcon icon={faChevronLeft} style={{color:"white"}} className="fas fa-camera"/>
@@ -19,16 +26,16 @@ const MessageDetails = () => {
 
     return (
 
-        <div className='justify-content-center popup-content'>
+        <div className='justify-content-center chat-popup-content'>
             
             <div className='msdDetailImg sticky-top d-flex bd-highlight container pt-3 text-white'>
                 
                 <div className="p-2 flex-shrink-1 bd-highlight pe-3">
                     
-                <button type="button" class="btn backBtn animate__animated animate__slideInUp animate__delay-1s">{msgDetailIcon}</button>
+                <button onClick={()=> pageChange("messageDetails")} type="button" class="btn backBtn animate__animated animate__slideInUp animate__delay-0.5s">{msgDetailIcon}</button>
                 
                 </div>
-                <div className="p-2 w-100 bd-highlight ps-3 animate__animated animate__slideInUp animate__delay-0.5s">
+                <div className="p-2 w-100 bd-highlight ps-3 animate__animated animate__fadeInRight animate__delay-0.5s">
                     <h4>Intercom</h4>
                     <p>We help your business grow by connecting <br/> you to your customers.</p>
 
@@ -53,9 +60,10 @@ const MessageDetails = () => {
             {/* messege history part      */}
 
             
-            <div className="d-flex align-items-start flex-column bd-highlight mb-3" style={{height:" 490px"}}>
-            <PerfectScrollbar>
-            <div className="mb-auto p-2 bd-highlight">
+            <div id='chat-container' className="d-flex align-items-start flex-column bd-highlight mb-3" style={{height:" 490px"}}>
+            {/* height:" 580px"  this need to be change for chat-container*/}
+            <PerfectScrollbar >
+            <div className="mb-auto p-2 bd-highlight" id='perfect-scroll'>
                 <p></p>
             </div>
             </PerfectScrollbar>

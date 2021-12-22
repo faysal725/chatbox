@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import './Message.css'
 
-const Message = () => {
-
+const Message = ({pageCng, currPage}) => {
+console.log(pageCng, currPage)
     const clockIcon = <FontAwesomeIcon icon={faClock} className="fas fa-camera clock-Icon"/>
     const sendIcon =  <FontAwesomeIcon icon={faPaperPlane} className="fas fa-camera"/>
-
+    
     return (
         <div className='container pb-3'>
             <h5 className='pt-3 pb-2'><b>Start a conversation</b></h5>
@@ -31,7 +31,7 @@ const Message = () => {
             </div>
             <div className="col">
 
-                <button type="button" className="btn btn-primary send-Icon">{sendIcon} <b className='px-2'>send us message</b> </button>
+                <button type="button" className="btn btn-primary send-Icon" onClick={() => pageCng("messageDetails")}>{sendIcon} <b className='px-2'>send us message</b> </button>
             </div>
             
         </div>

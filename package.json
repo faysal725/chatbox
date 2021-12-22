@@ -17,8 +17,10 @@
     "react-dom": "^17.0.2",
     "react-perfect-scrollbar": "^1.5.8",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.4",
     "react-wow": "^1.0.0",
     "reactjs-popup": "^2.0.5",
+    "simplebar-react": "^2.3.6",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
